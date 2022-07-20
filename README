@@ -1,0 +1,2 @@
+This program works in such a way that you have to put the link of the desired site in the requests.get section (of course, regex is written for a different site, you have to change the regex to use this program) and you get the desired information.
+My Instagram page: 3_oulless
