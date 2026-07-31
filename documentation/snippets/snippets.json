@@ -1,0 +1,359 @@
+{
+  "endpoints": {
+    "/api/v1/console/auth/login": {
+      "post": "import { BackendAsServiceSdk, LoginRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const loginRequest: LoginRequest = {\t\n    username: \"admin\",\n    password: \"Admin@5847!@#\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.login(loginRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/auth/change-password": {
+      "post": "import { BackendAsServiceSdk, ChangePasswordRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const changePasswordRequest: ChangePasswordRequest = {\t\n    currentPassword: \"Admin@5847!@#$\",\n    newPassword: \"Admin@5847!@#\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.changePassword(changePasswordRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/auth/logout": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logout();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCreateRequest1: BackendAsServiceSdkCreateRequest1 = {\t\n    name: \"name\",\n    code: \"code\",\n    contactEmail: \"contactEmail\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create(backendAsServiceSdkCreateRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/list": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest1: BackendAsServiceSdkGetRequest1 = {\t\n    tenantId: \"tenantId\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get_(backendAsServiceSdkGetRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest1: BackendAsServiceSdkUpdateRequest1 = {\t\n    tenantId: \"tenantId\",\n    name: \"name\",\n    code: \"code\",\n    contactEmail: \"contactEmail\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update(backendAsServiceSdkUpdateRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/deactivate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeActivateRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeActivateRequest1: BackendAsServiceSdkDeActivateRequest1 = {\t\n    tenantId: \"tenantId\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.deActivate(backendAsServiceSdkDeActivateRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest1: BackendAsServiceSdkDeleteRequest1 = {\t\n    tenantId: \"tenantId\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete_(backendAsServiceSdkDeleteRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/tenants/activate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkActivateRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkActivateRequest1: BackendAsServiceSdkActivateRequest1 = {\t\n    tenantId: \"543188327CD62569E063B36479BC6E8F\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.activate(backendAsServiceSdkActivateRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/auth/tenant/register": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkRegisterRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkRegisterRequest1: BackendAsServiceSdkRegisterRequest1 = {\t\n    firstName: \"حسن\",\n    lastName: \"احمدی\",\n    username: \"ahmadiiii\",\n    password: \"Admin@5847@#$\",\n    cellphone: 9182021614,\n    otpCode: 532978\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.register(backendAsServiceSdkRegisterRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/auth/tenant/send-otp": {
+      "post": "import { BackendAsServiceSdk, SendOtpRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const sendOtpRequest: SendOtpRequest = {\t\n    cellphone: 9182021614\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.sendOtp(sendOtpRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/admins/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCreateRequest2: BackendAsServiceSdkCreateRequest2 = {\t\n    username: \"rahimi2\",\n    password: \"Admin@5847!@#$\",\n    role: \"APP_ADMIN\",\n    firstName: \"matin\",\n    lastName: \"rahimi\",\n    roleId: \"5656091D58DB2F36E063B36479BC40C1\",\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create1(backendAsServiceSdkCreateRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/admins/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest2: BackendAsServiceSdkUpdateRequest2 = {\t\n    userId: \"565682DEE1213AE2E063B36479BC69AE\",\n    role: \"APP_ADMIN\",\n    cellphone: \"9182021310\",\n    firstName: \"ali\",\n    lastName: \"rahimi\",\n    roleId: \"56537502CCC16FEAE063B36479BC4057\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update1(backendAsServiceSdkUpdateRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/admins/list-by-tenant": {
+      "post": "import { BackendAsServiceSdk, ListByTenantRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const listByTenantRequest: ListByTenantRequest = {\t\n    tenantId: \"543188327CD42569E063B36479BC6E8F\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.listByTenant(listByTenantRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/admins/list-without-tenant": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.listWithOutTenant();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/admins/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest2: BackendAsServiceSdkDeleteRequest2 = {\t\n    userId: \"54335BF70DD14D0EE063B36479BCCB5D\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete1(backendAsServiceSdkDeleteRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/register": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkRegisterRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkRegisterRequest2: BackendAsServiceSdkRegisterRequest2 = {\t\n    appName: \"test\",\n    projectId: \"B050D969668C4029B650DAF613F9BE21\",\n    type: \"web\",\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.register1(backendAsServiceSdkRegisterRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest3: BackendAsServiceSdkUpdateRequest3 = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\",\n    appName: \"WebApp\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update2(backendAsServiceSdkUpdateRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/list": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkListRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkListRequest1: BackendAsServiceSdkListRequest1 = {\t\n    projectId: \"F1A108472001491D85E4B95A9A5960FE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list1(backendAsServiceSdkListRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/deactivate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeActivateRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeActivateRequest2: BackendAsServiceSdkDeActivateRequest2 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.deActivate1(backendAsServiceSdkDeActivateRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/activate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkActivateRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkActivateRequest2: BackendAsServiceSdkActivateRequest2 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.activate1(backendAsServiceSdkActivateRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/tokens/issue": {
+      "post": "import { BackendAsServiceSdk, TokensissueRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const tokensissueRequest: TokensissueRequest = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\",\n    createdBy: \"Matin_2\",\n    expiresInDays: 3\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.tokensissue(tokensissueRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/tokens/list": {
+      "post": "import { BackendAsServiceSdk, TokensListRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const tokensListRequest: TokensListRequest = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.tokensList(tokensListRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/apps/tokens/revoke": {
+      "post": "import { BackendAsServiceSdk, TokensRevokeRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const tokensRevokeRequest: TokensRevokeRequest = {\t\n    tokenId: \"3D1F7A8EDF494442BF7998F5C4838FFE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.tokensRevoke(tokensRevokeRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCreateRequest3: BackendAsServiceSdkCreateRequest3 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\",\n    name: \"app_test_config\",\n    key: \"APP_TEST_CONFF\",\n    value: \"TestTest\",\n    dataType: \"String\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create2(backendAsServiceSdkCreateRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest4 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest4: BackendAsServiceSdkUpdateRequest4 = {\t\n    configId: \"54361F167A630A40E063B36479BC960A\",\n    name: \"app_test_con\",\n    value: \"Test\",\n    dataType: \"String\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update3(backendAsServiceSdkUpdateRequest4);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest2: BackendAsServiceSdkGetRequest2 = {\t\n    configId: \"54354DBC3A2876FCE063B36479BC1EBC\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get1(backendAsServiceSdkGetRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/list": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkListRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkListRequest2: BackendAsServiceSdkListRequest2 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list2(backendAsServiceSdkListRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/get-by-key": {
+      "post": "import { BackendAsServiceSdk, GetByKeyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const getByKeyRequest: GetByKeyRequest = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\",\n    key: \"APP_TEST_CONF\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.getByKey(getByKeyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/activate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkActiveRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkActiveRequest1: BackendAsServiceSdkActiveRequest1 = {\t\n    configId: \"54354DBC3A2876FCE063B36479BC1EBC\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.active(backendAsServiceSdkActiveRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/deactivate": {
+      "post": "import { BackendAsServiceSdk, DeActiveRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const deActiveRequest: DeActiveRequest = {\t\n    configId: \"54354DBC3A2876FCE063B36479BC1EBC\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.deActive(deActiveRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/configs/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest3: BackendAsServiceSdkDeleteRequest3 = {\t\n    configId: \"54354DBC3A2876FCE063B36479BC1EBC\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete2(backendAsServiceSdkDeleteRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/config-rules/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest4, CreateRequestConditions } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const createRequestConditions: CreateRequestConditions = {\t\n    test: 1\n  };\n  \n  const backendAsServiceSdkCreateRequest4: BackendAsServiceSdkCreateRequest4 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\",\n    configId: \"54361F167A630A40E063B36479BC960A\",\n    priority: 5,\n    rolloutPercentage: 20,\n    conditions: createRequestConditions,\n    value: \"TestTestTest\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create3(backendAsServiceSdkCreateRequest4);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/config-rules/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest5, UpdateRequestConditions } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const updateRequestConditions: UpdateRequestConditions = {\t\n    test: 10\n  };\n  \n  const backendAsServiceSdkUpdateRequest5: BackendAsServiceSdkUpdateRequest5 = {\t\n    ruleId: \"7351F1BC0A314B39BE14CDE52E82A81E\",\n    priority: 6,\n    isActive: true,\n    rolloutPercentage: 30,\n    conditions: updateRequestConditions,\n    value: \"TestTestTest_Test\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update4(backendAsServiceSdkUpdateRequest5);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/config-rules/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest3: BackendAsServiceSdkGetRequest3 = {\t\n    ruleId: \"7351F1BC0A314B39BE14CDE52E82A81E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get2(backendAsServiceSdkGetRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/config-rules/list": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const input = {};\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list3(input);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/config-rules/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest4 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest4: BackendAsServiceSdkDeleteRequest4 = {\t\n    ruleId: \"7351F1BC0A314B39BE14CDE52E82A81E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete3(backendAsServiceSdkDeleteRequest4);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/audit/list": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkListRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkListRequest3: BackendAsServiceSdkListRequest3 = {\t\n    page: 1,\n    pageSize: 10\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list4(backendAsServiceSdkListRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/system-configs/list": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list5();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/system-configs/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest6 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest6: BackendAsServiceSdkUpdateRequest6 = {\t\n    configId: \"5436FE710919021FE063B36479BC4E00\",\n    value: \"6\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update5(backendAsServiceSdkUpdateRequest6);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/user-tokens/list": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const input = {};\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list6(input);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/user-tokens/revoke": {
+      "post": "import { BackendAsServiceSdk, RevokeRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const revokeRequest: RevokeRequest = {\t\n    tokenId: \"7C9446196F6444FCBA77F83E427B1793\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.revoke(revokeRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/crashes/list": {
+      "post": "import { BackendAsServiceSdk, DetailRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const detailRequest: DetailRequest = {\t\n    issueId: \"issueId\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.detail(detailRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/devices/count": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCountRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCountRequest1: BackendAsServiceSdkCountRequest1 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.count(backendAsServiceSdkCountRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/devices/count/tenant": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCountTenantRequest1 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCountTenantRequest1: BackendAsServiceSdkCountTenantRequest1 = {\t\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.countTenant(backendAsServiceSdkCountTenantRequest1);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/devices/deactivate": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkActiveRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkActiveRequest2: BackendAsServiceSdkActiveRequest2 = {\t\n    installationId: \"840881e18cbe400765483cf840dfbbd3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.active1(backendAsServiceSdkActiveRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/send": {
+      "post": "import { BackendAsServiceSdk, SendRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const sendRequest: SendRequest = {\t\n    appId: \"445FC79C72B04F1D9EEA9E2125A466CA\",\n    title: \"12متین\",\n    body: \"رحیمی\",\n    targetType: \"all\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.send(sendRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/stats": {
+      "post": "import { BackendAsServiceSdk, StatsRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const statsRequest: StatsRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.stats(statsRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/app-stats": {
+      "post": "import { AppStatsRequest, BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const appStatsRequest: AppStatsRequest = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\",\n    fromTimestamp: 1,\n    limit: 10\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.appStats(appStatsRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/by-region": {
+      "post": "import { BackendAsServiceSdk, ByRegionRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const byRegionRequest: ByRegionRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.byRegion(byRegionRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/by-brand": {
+      "post": "import { BackendAsServiceSdk, ByBrandRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const byBrandRequest: ByBrandRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.byBrand(byBrandRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/by-platform": {
+      "post": "import { BackendAsServiceSdk, ByPlatformRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const byPlatformRequest: ByPlatformRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.byPlatform(byPlatformRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/by-operator": {
+      "post": "import { BackendAsServiceSdk, ByOperatorRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const byOperatorRequest: ByOperatorRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.byOperator(byOperatorRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/by-version": {
+      "post": "import { BackendAsServiceSdk, ByVersionRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const byVersionRequest: ByVersionRequest = {\t\n    pushId: \"E85D5017557B4DB99354F27D3B1494D3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.byVersion(byVersionRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/log/by-tenant": {
+      "post": "import { BackendAsServiceSdk, LogByTenantRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const logByTenantRequest: LogByTenantRequest = {\t\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logByTenant(logByTenantRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/push/log/by-app": {
+      "post": "import { BackendAsServiceSdk, LogByAppRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const logByAppRequest: LogByAppRequest = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logByApp(logByAppRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/projects/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest5 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCreateRequest5: BackendAsServiceSdkCreateRequest5 = {\t\n    name: \"Test_Project_And\",\n    description: \"description_description_description\",\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create4(backendAsServiceSdkCreateRequest5);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/projects/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest7 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest7: BackendAsServiceSdkUpdateRequest7 = {\t\n    projectId: \"F1A108472001491D85E4B95A9A5960FE\",\n    name: \"Test_Test_Project\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update6(backendAsServiceSdkUpdateRequest7);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/projects/list": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkListRequest5 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkListRequest5: BackendAsServiceSdkListRequest5 = {\t\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list8(backendAsServiceSdkListRequest5);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/projects/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest5 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest5: BackendAsServiceSdkDeleteRequest5 = {\t\n    projectId: \"F1A108472001491D85E4B95A9A5960FE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete4(backendAsServiceSdkDeleteRequest5);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest6, CreateRequestModel, CreateRequestModelImageOnly, CreateRequestTarget } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const createRequestModelImageOnly: CreateRequestModelImageOnly = {\t\n    image: \"asdasdad\"\n  };\n  \n  const createRequestModel: CreateRequestModel = {\t\n    imageOnly: createRequestModelImageOnly\n  };\n  \n  \n  const createRequestTarget: CreateRequestTarget = {\t\n    users: \"all\"\n  };\n  \n  const backendAsServiceSdkCreateRequest6: BackendAsServiceSdkCreateRequest6 = {\t\n    appId: \"3809E8D4533D44368FDF1E569F831CFC\",\n    projectId: \"B050D969668C4029B650DAF613F9BE21\",\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\",\n    name: \"اندورید اپ\",\n    type: \"mobile\",\n    style: \"Horizontal\",\n    model: createRequestModel,\n    target: createRequestTarget\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create5(backendAsServiceSdkCreateRequest6);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest4 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest4: BackendAsServiceSdkGetRequest4 = {\t\n    messageId: \"ABAE5AD2FBD44E6099332FE6D57C938F\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get3(backendAsServiceSdkGetRequest4);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest8, UpdateRequestModel, UpdateRequestModelImageOnly, UpdateRequestTarget } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const updateRequestModelImageOnly: UpdateRequestModelImageOnly = {\t\n    image: \"asdasdad\"\n  };\n  \n  const updateRequestModel: UpdateRequestModel = {\t\n    imageOnly: updateRequestModelImageOnly\n  };\n  \n  \n  const updateRequestTarget: UpdateRequestTarget = {\t\n    users: \"all\"\n  };\n  \n  const backendAsServiceSdkUpdateRequest8: BackendAsServiceSdkUpdateRequest8 = {\t\n    messageId: \"ABAE5AD2FBD44E6099332FE6D57C938F\",\n    name: \"اندورید اپ جدید\",\n    type: \"tablet\",\n    style: \"Vertical\",\n    model: updateRequestModel,\n    target: updateRequestTarget\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update7(backendAsServiceSdkUpdateRequest8);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/list-by-app": {
+      "post": "import { BackendAsServiceSdk, ListByAppRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const listByAppRequest: ListByAppRequest = {\t\n    appId: \"3809E8D4533D44368FDF1E569F831CFC\",\n    limit: 1,\n    offset: 91\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.listByApp(listByAppRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/list-by-project": {
+      "post": "import { BackendAsServiceSdk, ListByProjectRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const listByProjectRequest: ListByProjectRequest = {\t\n    projectId: \"B050D969668C4029B650DAF613F9BE21\",\n    limit: 1,\n    offset: 3\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.listByProject(listByProjectRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/in-app/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest6 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest6: BackendAsServiceSdkDeleteRequest6 = {\t\n    messageId: \"ABAE5AD2FBD44E6099332FE6D57C938F\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete5(backendAsServiceSdkDeleteRequest6);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/list": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkListRequest6 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkListRequest6: BackendAsServiceSdkListRequest6 = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list9(backendAsServiceSdkListRequest6);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest5 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest5: BackendAsServiceSdkGetRequest5 = {\t\n    userId: \"6544E0A5B74A40D088997F4ACCB45A45\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get4(backendAsServiceSdkGetRequest5);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest7 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest7: BackendAsServiceSdkDeleteRequest7 = {\t\n    userId: \"04BF34D61EBE45F29B888FEDB79F664A\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete6(backendAsServiceSdkDeleteRequest7);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/unlock": {
+      "post": "import { BackendAsServiceSdk, UnlockRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const unlockRequest: UnlockRequest = {\t\n    userId: \"E76F26AAC25C4801BC9343C5E0030D9E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.unlock(unlockRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/revoke-sessions": {
+      "post": "import { BackendAsServiceSdk, RevokeSessionsRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const revokeSessionsRequest: RevokeSessionsRequest = {\t\n    userId: \"83FA50D3135B45D280311592F0C03200\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.revokeSessions(revokeSessionsRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/tokens": {
+      "post": "import { BackendAsServiceSdk, TokensRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const tokensRequest: TokensRequest = {\t\n    userId: \"83FA50D3135B45D280311592F0C03200\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.tokens(tokensRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/stats/total": {
+      "post": "import { BackendAsServiceSdk, StatsTotalRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const statsTotalRequest: StatsTotalRequest = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.statsTotal(statsTotalRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/stats/new-last-7-days": {
+      "post": "import { BackendAsServiceSdk, NewLast7DaysRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const newLast7DaysRequest: NewLast7DaysRequest = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.newLast7Days(newLast7DaysRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/stats/active-today": {
+      "post": "import { ActiveTodayRequest, BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const activeTodayRequest: ActiveTodayRequest = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.activeToday(activeTodayRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/users/stats/active-tokens": {
+      "post": "import { ActiveTokensRequest, BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const activeTokensRequest: ActiveTokensRequest = {\t\n    appId: \"F0E2D2C9EC644E0696F3D315792354BE\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.activeTokens(activeTokensRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/create": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCreateRequest7 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCreateRequest7: BackendAsServiceSdkCreateRequest7 = {\t\n    name: \"test_access\",\n    symbol: \"TEST_ACCESS\",\n    access: [\"5666214A90F63C32E063B36479BCBF16\"]\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.create6(backendAsServiceSdkCreateRequest7);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/update": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest9 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest9: BackendAsServiceSdkUpdateRequest9 = {\t\n    roleId: \"56537502CCC16FEAE063B36479BC4057\",\n    name: \"test\",\n    symbol: \"TEST_TEST\",\n    description: \"description-description-description\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update8(backendAsServiceSdkUpdateRequest9);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/list": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.list10();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/get": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkGetRequest6 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkGetRequest6: BackendAsServiceSdkGetRequest6 = {\t\n    roleId: \"56537502CCC16FEAE063B36479BC4057\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.get5(backendAsServiceSdkGetRequest6);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/delete": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkDeleteRequest8 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeleteRequest8: BackendAsServiceSdkDeleteRequest8 = {\t\n    roleId: \"56537502CCC16FEAE063B36479BC4057\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.delete7(backendAsServiceSdkDeleteRequest8);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/list-access": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const input = {};\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.listAccess(input);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/access/by/role": {
+      "post": "import { AccessByRoleRequest, BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const accessByRoleRequest: AccessByRoleRequest = {\t\n    roleId: \"56669A804E7E475FE063B36479BC68EB\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.accessByRole(accessByRoleRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/console/role/update/access/by/role": {
+      "post": "import { BackendAsServiceSdk, UpdateAccessRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const updateAccessRequest: UpdateAccessRequest = {\t\n    roleId: \"56669A804E7E475FE063B36479BC68EB\",\n    access: [\"5666214A90F63C32E063B36479BCBF16\"]\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.updateAccess(updateAccessRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/devices/register": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkRegisterRequest3 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkRegisterRequest3: BackendAsServiceSdkRegisterRequest3 = {\t\n    platform: \"ANDROID\",\n    userId: \"5424E370C18511DAE063B36479BCFB9E\",\n    appVersion: \"2.5.1\",\n    deviceBrand: \"Samsung\",\n    region: \"Tehran\",\n    simOperatorName: \"Hamrah Avval\",\n    gender: \"male\",\n    age: 25,\n    deviceLanguage: \"EN\",\n    osVersion: \"1.5.3\",\n    firstOpenAt: 1235487,\n    lastVisitAt: 9854752\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.register2(backendAsServiceSdkRegisterRequest3);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/devices/update": {
+      "patch": "import { BackendAsServiceSdk, BackendAsServiceSdkUpdateRequest10 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkUpdateRequest10: BackendAsServiceSdkUpdateRequest10 = {\t\n    token: \"OEJBRDk1RTAyRDNCNDdCMEEwRkEzRDVGQTQ5ODBEQzU6NDQ1RkM3OUM3MkIwNEYxRDlFRUE5RTIxMjVBNDY2Q0E.djTLR1WrCJf8e8kvSve9KvsraA4vU_OxztdOJa77OH4\",\n    userId: \"5424E370C18511DAE063B36479BCFB9E\",\n    appVersion: \"3.5.9\",\n    region: \"US\",\n    gender: \"female\",\n    age: 30\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.update9(backendAsServiceSdkUpdateRequest10);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/devices/deactivate": {
+      "delete": "import { BackendAsServiceSdk, BackendAsServiceSdkDeActivateRequest4 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkDeActivateRequest4: BackendAsServiceSdkDeActivateRequest4 = {\t\n    token: \"OEJBRDk1RTAyRDNCNDdCMEEwRkEzRDVGQTQ5ODBEQzU6NDQ1RkM3OUM3MkIwNEYxRDlFRUE5RTIxMjVBNDY2Q0E.djTLR1WrCJf8e8kvSve9KvsraA4vU_OxztdOJa77OH4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.deActivate3(backendAsServiceSdkDeActivateRequest4);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/push/send": {
+      "post": "import { BackendAsServiceSdk, Data, SendPushRequest, Targeting } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const data1: Data = {\t\n    text: \"hi\"\n  };\n  \n  \n  const targeting: Targeting = {\t\n    gender: \"male\",\n    ageMin: 18,\n    ageMax: 35,\n    region: \"IR\",\n    simOperatorName: \"Hamrah Avval\",\n    deviceBrand: \"Samsung\",\n    appVersion: \"2.5.1\"\n  };\n  \n  const sendPushRequest: SendPushRequest = {\t\n    apiKey: \"tok_app_W08Df-R-FNUJex09GYyZLX4DAgff3N2B\",\n    serverKey: \"tok_dev_JtXI1qRU7gNMDg6TFkxa8C1-9tnvsIky\",\n    title: \"سلام؟؟\",\n    body: \"خوبیییییییییی ؟؟\",\n    ttlSeconds: 5,\n    priority: \"HIGH\",\n    data: data1,\n    targetType: \"segment\",\n    targeting: targeting,\n    idempotencyKey: \"idempotencyKey\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.sendPush(sendPushRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/push/cancel": {
+      "post": "import { BackendAsServiceSdk, CancelPushRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const cancelPushRequest: CancelPushRequest = {\t\n    apiKey: \"tok_app_W08Df-R-FNUJex09GYyZLX4DAgff3N2B\",\n    serverKey: \"tok_dev_JtXI1qRU7gNMDg6TFkxa8C1-9tnvsIky\",\n    pushId: \"8877DA82ADB4467080A9376E7B793276\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.cancelPush(cancelPushRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/push/event": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const input = {};\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.event(input);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/registry/installation/get": {
+      "post": "import { BackendAsServiceSdk, InstallationGetRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const installationGetRequest: InstallationGetRequest = {\t\n    installationId: \"840881e18cbe400765483cf840dfbbd3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.installationGet(installationGetRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/registry/installation/deactivate": {
+      "post": "import { BackendAsServiceSdk, InstallationDeactivateRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const installationDeactivateRequest: InstallationDeactivateRequest = {\t\n    installationId: \"840881e18cbe400765483cf840dfbbd3\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.installationDeactivate(installationDeactivateRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/registry/user/bind": {
+      "post": "import { BackendAsServiceSdk, UserBindRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const userBindRequest: UserBindRequest = {\t\n    installationId: \"840881e18cbe400765483cf840dfbbd3\",\n    userId: \"5432E4CA025C4374E063B36479BC722B\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.userBind(userBindRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/registry/count": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCountRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCountRequest2: BackendAsServiceSdkCountRequest2 = {\t\n    appId: \"1F06769946814A9D9497C249490AE6A4\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.count1(backendAsServiceSdkCountRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/registry/count/tenant": {
+      "post": "import { BackendAsServiceSdk, BackendAsServiceSdkCountTenantRequest2 } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const backendAsServiceSdkCountTenantRequest2: BackendAsServiceSdkCountTenantRequest2 = {\t\n    tenantId: \"5422BB3CD7336067E063B36479BC301E\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.countTenant1(backendAsServiceSdkCountTenantRequest2);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/phone/register/send-otp": {
+      "post": "import { BackendAsServiceSdk, RegisterWithCellPhoneRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const registerWithCellPhoneRequest: RegisterWithCellPhoneRequest = {\t\n    phone: \"09182021310\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.registerWithCellPhone(registerWithCellPhoneRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/phone/register/verify": {
+      "post": "import { BackendAsServiceSdk, PhoneRegisterVerifyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const phoneRegisterVerifyRequest: PhoneRegisterVerifyRequest = {\t\n    phone: \"09182021310\",\n    code: \"509186\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.phoneRegisterVerify(phoneRegisterVerifyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/register/send-otp": {
+      "post": "import { BackendAsServiceSdk, RegisterWithEmailRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const registerWithEmailRequest: RegisterWithEmailRequest = {\t\n    email: \"matinrahimy@gmail.com\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.registerWithEmail(registerWithEmailRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/register/verify": {
+      "post": "import { BackendAsServiceSdk, EmailRegisterVerifyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const emailRegisterVerifyRequest: EmailRegisterVerifyRequest = {\t\n    email: \"matinrahimy@gmail.com\",\n    code: \"313702\",\n    password: \"Admin@5847!@#\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.emailRegisterVerify(emailRegisterVerifyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/phone/login/send-otp": {
+      "post": "import { BackendAsServiceSdk, LoginWithCellPhoneRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const loginWithCellPhoneRequest: LoginWithCellPhoneRequest = {\t\n    phone: \"09182021310\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.loginWithCellPhone(loginWithCellPhoneRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/phone/login/verify": {
+      "post": "import { BackendAsServiceSdk, PhoneLoginVerifyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const phoneLoginVerifyRequest: PhoneLoginVerifyRequest = {\t\n    phone: \"09182021310\",\n    code: \"287016\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.phoneLoginVerify(phoneLoginVerifyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/login/send-otp": {
+      "post": "import { BackendAsServiceSdk, LoginWithEmailRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const loginWithEmailRequest: LoginWithEmailRequest = {\t\n    email: \"matinrahimy@gmail.com\",\n    password: \"Admin@5847!@\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.loginWithEmail(loginWithEmailRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/login/verify": {
+      "post": "import { BackendAsServiceSdk, EmailLoginVerifyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const emailLoginVerifyRequest: EmailLoginVerifyRequest = {\t\n    email: \"matinrahimy@gmail.com\",\n    code: \"479866\",\n    password: \"Admin@5847!@\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.emailLoginVerify(emailLoginVerifyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/anonymous": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const input = {};\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.registerAnonymous(input);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/my-gov": {
+      "post": "import { BackendAsServiceSdk, LoginWithDolatManRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const loginWithDolatManRequest: LoginWithDolatManRequest = {\t\n    code: \"251487\",\n    myGovClientId: \"myGovClientId\",\n    myGovClientSecret: \"myGovClientSecret\",\n    myGovRedirectUri: \"myGovRedirectUri\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.loginWithDolatMan(loginWithDolatManRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/session/logout": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logOut1();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/session/tokens": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.fetchTokens();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/session/tokens/revoke": {
+      "post": "import { BackendAsServiceSdk, RevokeTokenRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const revokeTokenRequest: RevokeTokenRequest = {\t\n    tokenId: \"AA61A940F2E64D8B9D119C1A7C27A719\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.revokeToken(revokeTokenRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/profile/get": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.fetchUser();\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/profile/update": {
+      "post": "import { BackendAsServiceSdk, UpdateUserRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const updateUserRequest: UpdateUserRequest = {\t\n    firstName: \"متین\",\n    lastName: \"رحیمی\",\n    gender: \"male\",\n    birthDate: \"1379-12-07\",\n    province: \"تهران\",\n    city: \"تهران\",\n    address: \"میدان گلچین\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.updateUser(updateUserRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/reset/password/sent-otp": {
+      "post": "import { BackendAsServiceSdk, ResetPasswordRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const resetPasswordRequest: ResetPasswordRequest = {\t\n    email: \"matinrahimy@gmail.com\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.resetPassword(resetPasswordRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/reset/password/verify": {
+      "post": "import { BackendAsServiceSdk, ResetPasswordVerifyRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const resetPasswordVerifyRequest: ResetPasswordVerifyRequest = {\t\n    email: \"matinrahimy@gmail.com\",\n    password: \"Admin@5847!@\",\n    code: \"253827\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.resetPasswordVerify(resetPasswordVerifyRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/email/convert/user": {
+      "post": "import { BackendAsServiceSdk, ConvertUserByEmailRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const convertUserByEmailRequest: ConvertUserByEmailRequest = {\t\n    email: \"matinrahimy1379@gmail.com\",\n    password: \"Admin@5847!@\",\n    code: \"722512\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.convertUserByEmail(convertUserByEmailRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/auth/google": {
+      "post": "import { BackendAsServiceSdk, LogInWithGoogleRequest } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  \n  const logInWithGoogleRequest: LogInWithGoogleRequest = {\t\n    googleIdToken: \"googleIdToken\",\n    googleClientId: \"googleClientId\"\n  };\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logInWithGoogle(logInWithGoogleRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/api/v1/delivery/poll": {
+      "post": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.pull();\n\n  console.log(data);\n})();\n"
+    }
+  },
+  "example": "import { BackendAsServiceSdk } from 'backend-as-service-sdk';\n\n(async () => {\n  const backendAsServiceSdk = new BackendAsServiceSdk({\n\ttoken: 'YOUR_TOKEN',\n});\n\n  const data = await backendAsServiceSdk.backendAsServiceSdk.logout();\n\n  console.log(data);\n})();\n",
+  "authentication": {
+    "bearer": {
+      "constructor": "const sdk = new BackendAsServiceSdk({ token: 'YOUR_TOKEN' });",
+      "setter": "const sdk = new BackendAsServiceSdk();\nsdk.token = 'YOUR_TOKEN';"
+    }
+  }
+}
